@@ -2,7 +2,10 @@
   border: 2px solid black;
   height: 100px;
   width: 100px;
+  text-align: center;
+  font-size: 90px;
 }
+
 
 .grid {
   display: flex;
