@@ -8,7 +8,7 @@ const App = () => {
   return (
     <>
       <h1>Tic Tac Toe</h1>
-      <Square />
+      <Square squares={squares}/>
     </>
   )
 }

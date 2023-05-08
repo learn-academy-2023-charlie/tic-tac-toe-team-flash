@@ -3,3 +3,11 @@
   height: 100px;
   width: 100px;
 }
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 315px;
+  margin: 0 auto;
+}
+h1{text-align: center;}
