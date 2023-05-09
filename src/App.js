@@ -6,7 +6,7 @@ import './App.css'
 const App = () => {
   const [squares, setSquares] = useState(Array(9).fill(null))
   const [isX, setIsX] = useState(true)
-  const [winningPlayer, setWinningPlayer] = useState(false)
+  // const [winningPlayer, setWinningPlayer] = useState(false)
 
   const winCombos = [[
     [0, 1, 2],
@@ -20,11 +20,11 @@ const App = () => {
   ]
 ]
 
-const checkWinner = (squares) => {
+const checkWinner = () => {
   for (let i=0; i<winCombos.length; i++) {
     const [a, b, c] = winCombos[i];
     if (squares[a] && squares [a] === squares[b] && squares[a] === squares[c]){
-      setWinningPlayer(squares[a])
+      return squares[a]
     }
   }
 }
@@ -39,11 +39,11 @@ const checkWinner = (squares) => {
     setIsX(!isX)
   }
 
-  const winner = checkWinner(squares)
+  const winningPlayer = checkWinner(squares)
   let status
 
   if (winningPlayer) {
-    return alert("you won!")
+    status = `Winner: ${winningPlayer}`
   } else {
     status = 'Next player: ' + (isX ? 'X' : 'O');
   }
@@ -60,6 +60,7 @@ const checkWinner = (squares) => {
       <Square squares={squares}
       handleClick= {handleClick}/>
       <button onClick= {resetGame} className = "button"><strong>RESET</strong></button>
+      <div className="status">{status}</div>
     </>
   )
 }
