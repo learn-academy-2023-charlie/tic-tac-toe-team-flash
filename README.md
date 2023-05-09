@@ -7,8 +7,17 @@ When creating a project it is important to think about organization of your code
 ### 📚 User Stories
 
 - As a user, I can see a three by three grid game board on the page.
+    
 - As a user, I can click on a square to mark it.
 - As a user, my partner can click on a square after me and see their mark.
+    const handleClick = (index) => {
+    let boardUpdate = [...squares]
+    if (squares[index] === null) {
+      boardUpdate[index] = player
+    setPlayer[player] = "X" ? "O": "X"
+    setSquares(boardUpdate)
+  } else {}
+
 - As a user, I can't click on a square that has already been marked.
 - As a user, when either my partner or I win the game (three squares in a row: horizontally, vertically, or diagonally) I can see a notice telling me which player won.
 - As a user, I can't continue playing the game after the game has been won.

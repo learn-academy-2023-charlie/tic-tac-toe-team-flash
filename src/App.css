@@ -2,4 +2,23 @@
   border: 2px solid black;
   height: 100px;
   width: 100px;
+  text-align: center;
+  font-size: 90px;
+}
+
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 315px;
+  margin: 0 auto;
+}
+h1{text-align: center;}
+
+.button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: auto;
 }
